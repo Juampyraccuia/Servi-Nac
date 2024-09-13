@@ -1,16 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servi-Nac</title>
+  <title>Servicios Técnicos Profesionales</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
-
+    <nav>
+      <div class="logo">Logo</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
   </header>
+
+  <main>
+    <section id="inicio">
+      <h1>Servicios Técnicos Profesionales</h1>
+      <p>Expertos en electricidad, electromecánica, gas y refrigeración</p>
+    </section>
+
+    <section id="servicios">
+      <h2>Nuestros Servicios</h2>
+      <div class="servicios-grid">
+        <div class="servicio">
+          <h3>Electricidad</h3>
+          <p>Instalaciones y reparaciones eléctricas de alta calidad.</p>
+        </div>
+        <div class="servicio">
+          <h3>Electromecánica</h3>
+          <p>Mantenimiento y reparación de equipos electromecánicos.</p>
+        </div>
+        <div class="servicio">
+          <h3>Gas</h3>
+          <p>Instalaciones y mantenimiento de sistemas de gas seguros.</p>
+        </div>
+        <div class="servicio">
+          <h3>Refrigeración</h3>
+          <p>Instalación y reparación de sistemas de refrigeración y aire acondicionado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios">
+      <h2>Testimonios</h2>
+      <div id="testimonios-slider">
+        <!-- Los testimonios se cargarán aquí dinámicamente -->
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <form id="contactForm">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
   <footer>
-    
+    <p>&copy; 2023 Servicios Técnicos Profesionales. Todos los derechos reservados.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
