@@ -11,12 +11,12 @@
 <body>
   <header>
     <nav>
-      <div class="logo">Logo</div>
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#testimonios">Testimonios</a></li>
         <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#certificados">Certificados</a></li>
       </ul>
       <div class="burger">
         <div class="line1"></div>
@@ -28,10 +28,12 @@
 
   <main>
     <section id="inicio">
-      <h1>Servicios Técnicos Profesionales</h1>
-      <p>Expertos en electricidad, electromecánica, gas y refrigeración</p>
+      <div class="centered-content">
+        <h1>Servicios Técnicos Profesionales</h1>
+        <p>Expertos en electricidad, electromecánica, gas y refrigeración</p>
+      </div>
     </section>
-
+    <br>
     <section id="servicios">
       <h2>Nuestros Servicios</h2>
       <div class="servicios-grid">
@@ -53,27 +55,69 @@
         </div>
       </div>
     </section>
-
+    <br>
+    <br>
+    <br>
     <section id="testimonios">
       <h2>Testimonios</h2>
       <div id="testimonios-slider">
         <!-- Los testimonios se cargarán aquí dinámicamente -->
       </div>
     </section>
-
+    <br>
+    <br>
+    <br>
     <section id="contacto">
-      <h2>Contáctanos</h2>
-      <form id="contactForm">
-        <input type="text" name="nombre" placeholder="Nombre" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+      <div class="centered-content">
+        <h2>Contáctanos</h2>
+        <form id="contactForm">
+          <input type="text" name="nombre" placeholder="Nombre" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <section id="certificados">
+      <h2>Certificados</h2>
+      <div class="carrusel">
+        <div class="carrusel-inner">
+          <div class="carrusel-item">
+            <img src="img/img1.jpeg" alt="Imagen 1">
+          </div>
+          <div class="carrusel-item">
+            <img src="img/img2.jpeg" alt="Imagen 2">
+          </div>
+          <div class="carrusel-item">
+            <img src="img/img3.jpeg" alt="Imagen 3">
+          </div>
+        </div>
+        
+        <!-- Controles -->
+        <button class="carrusel-control prev">&#10094;</button>
+        <button class="carrusel-control next">&#10095;</button>
+      
+        <!-- Indicadores -->
+        <div class="indicators">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo">
+      <div>
+        <img src="img/servi Nac.png" alt="">
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2023 Servicios Técnicos Profesionales. Todos los derechos reservados.</p>
+    <p>&copy; SERVI-NAC. Todos los derechos reservados 2024</p>
   </footer>
 
   <script src="script.js"></script>
