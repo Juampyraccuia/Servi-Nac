@@ -116,3 +116,43 @@ function initializeCarousel() {
 
   startInterval();
 }
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Previene el comportamiento predeterminado del enlace
+
+      const targetId = this.getAttribute('href'); // Obtiene el ID de destino
+      const targetElement = document.querySelector(targetId); // Selecciona el elemento objetivo
+
+      // Ralentiza el desplazamiento
+      smoothScroll(targetElement.offsetTop, 1000); // 1000 ms para el desplazamiento
+
+  });
+});
+
+// Función para un desplazamiento suave
+function smoothScroll(targetPosition, duration) {
+  const startPosition = window.pageYOffset; // Posición actual del scroll
+  const distance = targetPosition - startPosition; // Distancia a recorrer
+  let startTime = null;
+
+  function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime; // Tiempo transcurrido
+      const scrollStep = ease(timeElapsed, startPosition, distance, duration); // Cálculo del paso de scroll
+      window.scrollTo(0, scrollStep); // Realiza el scroll
+
+      if (timeElapsed < duration) {
+          requestAnimationFrame(animation); // Continua la animación
+      }
+  }
+
+  requestAnimationFrame(animation); // Inicia la animación
+}
+
+// Función de easing para suavizar el scroll
+function ease(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t + b;
+  t--;
+  return -c / 2 * (t * (t - 2) - 1) + b;
+}
